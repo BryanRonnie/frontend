@@ -1,0 +1,16 @@
+{
+  "app": {
+    "title": "Your App",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "settings": "Settings",
+      "routers": "Routers",
+      "policies": "Policies"
+    },
+    "theme": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    }
+  }
+}

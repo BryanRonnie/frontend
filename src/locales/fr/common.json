@@ -1,0 +1,16 @@
+{
+  "app": {
+    "title": "Votre Application",
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "settings": "Paramètres",
+      "routers": "Routeurs",
+      "policies": "Politiques"
+    },
+    "theme": {
+      "light": "Mode Clair",
+      "dark": "Mode Sombre"
+    }
+  }
+}
