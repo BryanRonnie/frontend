@@ -20,7 +20,7 @@ const ThemeSwitch = () => {
           {theme === 'dark' ? (
             <Moon className="h-4 w-4 pb-1 pr-0.5 text-blue-950 ml-7 transition-all duration-200" />
           ) : (
-            <Sun className="h-4 w-4 pb-1 pl-0.5 text-amber-500 ml-1 transition-all duration-200" />
+            <Sun className="h-4 w-4 pb-1 pl-0.5 ml-1 transition-all duration-200" />
           )}
         </div>
       </div>

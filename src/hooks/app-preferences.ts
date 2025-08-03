@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { type RootState } from '../redux';
-import { setLanguage, setTheme, toggleTheme } from '../redux/slices/appPreferencesSlice';
+import { setLanguage, setTheme, toggleTheme } from '../redux/slices/appPreferences';
 
 export const useAppPreferences = () => {
   const dispatch = useDispatch();

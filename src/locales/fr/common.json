@@ -8,9 +8,23 @@
       "routers": "Routeurs",
       "policies": "Politiques"
     },
+    "profile": {
+      "viewProfile": "View Profile",
+      "editProfile": "Edit Profile",
+      "logout": "Logout"
+    },
     "theme": {
       "light": "Mode Clair",
       "dark": "Mode Sombre"
+    },
+    "routers": {
+      "routersManagement": "Gestion des Routeurs"
+    },
+    "policies": {
+      "policiesManagement": "Gestion des Politiques"
+    },
+    "users": {
+      "usersManagement": "Gestion des Utilisateurs"
     }
   }
 }

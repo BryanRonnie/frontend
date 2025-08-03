@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import languageReducer from './slices/languageSlice';
-import appPreferencesReducer from './slices/appPreferencesSlice';
+import appPreferencesReducer from './slices/appPreferences';
+import userAccountsReducer from './slices/userAccounts';
 
 const persistConfig = {
   key: 'root',
@@ -10,13 +10,13 @@ const persistConfig = {
   whitelist: ['language']
 };
 
-const persistedLanguageReducer = persistReducer(persistConfig, languageReducer);
 const appPreferencesLanguageReducer = persistReducer(persistConfig, appPreferencesReducer);
+const userAccountsPersistedReducer = persistReducer(persistConfig, userAccountsReducer);
 
 export const store = configureStore({
   reducer: {
-    language: persistedLanguageReducer,
-    appPreferences: appPreferencesLanguageReducer
+    appPreferences: appPreferencesLanguageReducer,
+    userAccounts: userAccountsPersistedReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

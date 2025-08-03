@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarTrigger
 } from "@/components/ui/sidebar"
-import { GlobeLock, Handshake, LayoutDashboard, Router, Users } from "lucide-react"
+import { GlobeLock, LayoutDashboard, Router, Users } from "lucide-react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
 

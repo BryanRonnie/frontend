@@ -6,10 +6,11 @@ import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/Sidebar.tsx"
 import { I18nextProvider } from 'react-i18next'
 import i18n from './lib/i18next-config.ts'
-import { Toolbar } from "./components/Toolbar.tsx"
+import { Toolbar } from "./components/Toolbar"
 import Dashboard from "./pages/Dashboard/index.tsx"
 import Users from "./pages/Users/index.tsx"
 import Login from "./pages/Login/index.tsx"
+import SignUp from "./pages/SignUp/index.tsx"
 import Settings from "./pages/Settings/index.tsx"
 import { useEffect } from "react"
 import { useAppPreferences } from "./hooks/app-preferences.ts"
@@ -32,7 +33,7 @@ function ThemeWrapper({ children }: { children: React.ReactNode }) {
 // Separate component for routing logic
 function AppRoutes() {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/';
+  const isLoginPage = location.pathname === '/login' || location.pathname === '/sign-up';
 
   return (
     <div className="flex-row h-screen">
@@ -53,7 +54,8 @@ function AppRoutes() {
           </SidebarProvider>
         ) : (
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
           </Routes>
         )}
       </div>

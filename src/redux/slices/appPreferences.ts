@@ -1,7 +1,9 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
+export type Languages = 'en' | 'fr';
+
 type AppPreferencesState = {
-  currentLanguage: string;
+  currentLanguage: 'en' | 'fr';
   theme: 'light' | 'dark';
 };
 
@@ -14,7 +16,7 @@ export const appPreferencesSlice = createSlice({
   name: 'appPreferences',
   initialState,
   reducers: {
-    setLanguage: (state, action: PayloadAction<string>) => {
+    setLanguage: (state, action: PayloadAction<Languages>) => {
       state.currentLanguage = action.payload;
     },
     setTheme: (state, action: PayloadAction<'light' | 'dark'>) => {
